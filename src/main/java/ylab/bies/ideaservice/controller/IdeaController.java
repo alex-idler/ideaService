@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import ylab.bies.ideaservice.service.IdeaService;
-import ylab.bies.ideaservice.util.Decoder;
 
 @Slf4j
 @Tag(name = "Idea Controller", description = "REST operations with ideas")
