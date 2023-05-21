@@ -1,0 +1,18 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-statuses-table
+      author: alex
+      changes:
+        - createTable:
+            tableName: statuses
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar

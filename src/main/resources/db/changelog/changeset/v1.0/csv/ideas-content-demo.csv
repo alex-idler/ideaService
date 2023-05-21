@@ -1,0 +1,9 @@
+id,user_id,name,text,status_id,rating
+5,005ed884-6a67-49c9-a319-82438438eb00,idea-5-(DRAFT),idea-5-text,1,
+6,005ed884-6a67-49c9-a319-82438438eb00,idea-6-name,idea-6-text,2,
+7,005ed884-6a67-49c9-a319-82438438eb00,idea-7-(ACCEPTED),idea-7-text,3,
+1,a81bc81b-dead-4e5d-abff-90865d1e13b1,idea-1-name,idea-1-text,2,2
+2,1a967e7d-fcbd-4165-9217-795da2f28076,idea-2-name,idea-2-text,2,2
+3,1a967e7d-fcbd-4165-9217-795da2f28076,idea-3-name,idea-3-text,2,2
+4,1a967e7d-fcbd-4165-9217-795da2f28076,idea-4-name,idea-4-text,2,0
+8,005ed884-6a67-49c9-a319-82438438eb00,idea-8-(REJECTED),idea-8-text,4,-1

@@ -1,0 +1,32 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-ideas-table
+      author: alex
+      changes:
+        - createTable:
+            tableName: ideas
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: user_id
+                  type: uuid
+                  constraints:
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar
+              - column:
+                  name: text
+                  type: varchar
+              - column:
+                  name: status_id
+                  type: bigint
+              - column:
+                  name: rating
+                  type: integer

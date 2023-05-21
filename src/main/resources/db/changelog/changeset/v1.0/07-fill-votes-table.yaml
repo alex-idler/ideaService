@@ -1,0 +1,26 @@
+databaseChangeLog:
+  - changeSet:
+      id: fill-votes-table
+      author: alex
+      changes:
+        - loadData:
+            tableName: votes
+            usePreparedStatements: false
+            separator: ','
+            relativeToChangelogFile: true
+            file: ./csv/votes-content-demo.csv
+            encoding: UTF-8
+            quotchar: ''''
+            columns:
+              - column:
+                  header: idea_id
+                  name: idea_id
+                  type: bigint
+              - column:
+                  header: user_id
+                  name: user_id
+                  type: uuid
+              - column:
+                  header: like
+                  name: like
+                  type: booleanW

@@ -1,0 +1,22 @@
+databaseChangeLog:
+  - changeSet:
+      id: fill-statuses-table
+      author: alex
+      changes:
+        - loadData:
+            tableName: statuses
+            usePreparedStatements: false
+            separator: ','
+            relativeToChangelogFile: true
+            file: ./csv/statuses-content.csv
+            encoding: UTF-8
+            quotchar: ''''
+            columns:
+              - column:
+                  header: id
+                  name: id
+                  type: bigint
+              - column:
+                  header: name
+                  name: name
+                  type: varchar
