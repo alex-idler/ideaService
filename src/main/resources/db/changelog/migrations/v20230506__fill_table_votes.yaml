@@ -4,6 +4,7 @@ databaseChangeLog:
       author: alex
       changes:
         - loadData:
+            schemaName: idea_db
             tableName: votes
             usePreparedStatements: false
             separator: ','
@@ -21,6 +22,6 @@ databaseChangeLog:
                   name: user_id
                   type: uuid
               - column:
-                  header: like
-                  name: like
-                  type: booleanW
+                  header: is_like
+                  name: is_like
+                  type: boolean

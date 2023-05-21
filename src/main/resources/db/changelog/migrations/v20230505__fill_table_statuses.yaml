@@ -4,6 +4,7 @@ databaseChangeLog:
       author: alex
       changes:
         - loadData:
+            schemaName: idea_db
             tableName: statuses
             usePreparedStatements: false
             separator: ','

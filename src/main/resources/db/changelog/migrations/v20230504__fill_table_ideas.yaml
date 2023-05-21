@@ -1,32 +1,39 @@
 databaseChangeLog:
   - changeSet:
-      id: create-ideas-table
+      id: fill-ideas-table
       author: alex
       changes:
-        - createTable:
+        - loadData:
+            schemaName: idea_db
             tableName: ideas
+            usePreparedStatements: false
+            separator: ','
+            relativeToChangelogFile: true
+            file: ./csv/ideas-content-demo.csv
+            encoding: UTF-8
+            quotchar: ''''
             columns:
               - column:
+                  header: id
                   name: id
                   type: bigint
-                  autoIncrement: true
-                  constraints:
-                    primaryKey: true
-                    nullable: false
               - column:
+                  header: user_id
                   name: user_id
                   type: uuid
-                  constraints:
-                    nullable: false
               - column:
+                  header: name
                   name: name
                   type: varchar
               - column:
+                  header: text
                   name: text
                   type: varchar
               - column:
+                  header: status_id
                   name: status_id
                   type: bigint
               - column:
+                  header: rating
                   name: rating
                   type: integer

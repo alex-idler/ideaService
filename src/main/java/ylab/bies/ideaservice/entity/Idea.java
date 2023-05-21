@@ -1,6 +1,7 @@
 package ylab.bies.ideaservice.entity;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 import org.hibernate.Hibernate;
@@ -12,6 +13,7 @@ import java.util.UUID;
 
 @Getter
 @Setter
+@NoArgsConstructor
 @ToString
 @Entity
 @Table(name = "ideas")
@@ -21,14 +23,17 @@ public class Idea {
     @NotNull
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private UUID userId;
+
     private String name;
+
     private String text;
-    private Long statusId;
+
     private Integer rating;
 
-    public Idea() {
-    }
+    @Column(nullable = false)
+    private UUID userId;
+
+    private Long statusId;
 
     public Idea(UUID userId) {
         this.userId = userId;

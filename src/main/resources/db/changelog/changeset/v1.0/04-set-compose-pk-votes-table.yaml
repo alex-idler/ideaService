@@ -1,9 +1,0 @@
-databaseChangeLog:
-  - changeSet:
-      id: set-compose-pk-votes-table
-      author: alex
-      changes:
-        - addPrimaryKey:
-            columnNames: "idea_id, user_id"
-            constraintName: "PK"
-            tableName: votes
