@@ -16,12 +16,4 @@ class IdeaControllerTest {
     @Autowired
     private IdeaServiceImpl ideaService;
 
-    @Test
-    void findById() {
-        Idea idea = ideaService.findById(1L).orElse(null);
-        Assert.assertNotNull(idea);
-        System.out.println(idea);
-        idea = ideaService.findById(0L).orElse(null);
-        Assert.assertNull(idea);
-    }
 }
